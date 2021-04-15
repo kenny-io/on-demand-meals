@@ -1,0 +1,17 @@
+[build]
+
+publish = "dist"
+functions = "functions"
+command = "gridsome build"
+
+
+[dev]
+publish = "dist"
+functions = "functions"
+command = "gridsome develop"
+
+[[redirects]]
+from = "/product/:id"
+to = "/.netlify/functions/product?id=:id"
+status = 200
+force = true
