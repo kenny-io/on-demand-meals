@@ -1,14 +1,17 @@
-# Default starter for Gridsome
+# ON-DEMAND-MEALS BUILDER DEMO
 
-This is the project you get when you run `gridsome create new-project`.
+This tiny restaurant site shows a handful of meals from [this api](http://test.gasport.com.ng/API/OrderList) .
 
-### 1. Install Gridsome CLI tool if you don't have
+At build time, all the meals are pre generated via Gridsome's GraphQL data layer and served as static assets.
 
-`npm install --global @gridsome/cli`
+On clicking any of the meals, we trigger the `/functions/product.js` builder function to fetch the details of the meal, hence, generating views on demand for each product.
 
-### 2. Create a Gridsome project
+The retrieved meal is then cached, and served to users on subsequent requests.
 
-1. `gridsome create my-gridsome-site` to install default starter
-2. `cd my-gridsome-site` to open the folder
-3. `gridsome develop` to start a local dev server at `http://localhost:8080`
-4. Happy coding 🎉🙌
+### Resource:
+
+I put together [this api](http://test.gasport.com.ng/API/OrderList) just to return the data I needed for the demo.
+
+### Deployed site
+
+https://on-demand-meals.netlify.app/
